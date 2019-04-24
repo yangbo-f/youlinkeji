@@ -39,8 +39,8 @@
 								<h2>{{item.time|weekDate}}</h2>
 								<span>{{item.time|day}}</span>
 							</div>
-							<h2><a href="">{{item.title}}</a></h2>
-							<p><a href="">{{item.text}}</a></p>
+							<h2><router-link :to="{name:'newscontent',params:{id:item.id}}">{{item.title}}</router-link></h2>
+							<p><router-link :to="{name:'newscontent',params:{id:item.id}}">{{item.summary}}</router-link></p>
 							<div class="clear"></div>
 						</li>
 					</ul>
@@ -56,14 +56,14 @@
 			</div>
 			<div class="box">
 				<div class="sort" v-for="(item,index) in product" :key="index">
-					<a href="">
+					<router-link :to="{name:'productList',params:{id:item.id}}">
 						<img :src="item.img" alt="">
 						<img class="bigimg" :class="'bigimg'+(index+1)" :src="item.img" alt="">
 						<div class="txt">
 							<h2>{{item.name}}</h2>
 							<p>{{item.content}}</p>
 						</div>
-					</a>
+					</router-link>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -74,12 +74,13 @@
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.min.css";
 import indexData from "../assets/js/index.js";
+import newsdata from "../assets/libs/news-con.js";
 export default {
 	data() {
 		return {
 			banner: indexData.banner,
 			product: indexData.product,
-			news: indexData.news
+			news: ''
 		};
 	},
 	mounted() {
@@ -100,6 +101,11 @@ export default {
 				prevEl: ".swiper-button-prev"
 			}
 		});
+		var newslist = [];
+		for(var i=0;i<5;i++){
+			newslist.push(newsdata[i])
+		}
+		this.news = newslist
 	},
 	filters: {
 		weekDate: function(value) {

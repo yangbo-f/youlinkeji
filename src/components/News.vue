@@ -1,103 +1,25 @@
 <template>
   <div class="hello">
-    <h3>这是news页面	</h3>
-	{{pageid}}
 	<div class="box">
-                <div class="item">
+                <div class="item" v-for="(item,index) in list" :key="index">
                     <div class="pic lt">
-                        <img src="../assets/images/news/news.png" alt="">
+						<router-link :to="{name:'newscontent',params:{id:item.id}}"><img :src="item.poster" alt=""></router-link>
                     </div>
                     <div class="txt rt">
-                        <h2><a href="">加拿大绿色建筑技术合作交流会石家庄站圆满举办</a></h2>
-                        <p><a href="">1月16日，加拿大木结构与绿色建筑技术合作交流会在石家庄市成功召开。本活动旨在推进河北省绿色发展，增进省内企业对加拿大木结构与绿色建筑技术和产品的了解，促进技术交流合作和木结构行业发展。</a></p>
-                        <span>2018-01-16</span>
+                        <h2><router-link :to="{name:'newscontent',params:{id:item.id}}">{{item.title}}</router-link></h2>
+                        <p><router-link :to="{name:'newscontent',params:{id:item.id}}">{{item.summary}}</router-link></p>
+                        <span>{{item.time}}</span>
                     </div>
                     <div class="clear"></div>
                 </div>
-                <div class="item">
-                    <div class="pic lt">
-                        <img src="../assets/images/news/news.png" alt="">
-                    </div>
-                    <div class="txt rt">
-                        <h2><a href="">加拿大绿色建筑技术合作交流会石家庄站圆满举办</a></h2>
-                        <p><a href="">1月16日，加拿大木结构与绿色建筑技术合作交流会在石家庄市成功召开。本活动旨在推进河北省绿色发展，增进省内企业对加拿大木结构与绿色建筑技术和产品的了解，促进技术交流合作和木结构行业发展。</a></p>
-                        <span>2018-01-16</span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="item">
-                    <div class="pic lt">
-                        <img src="../assets/images/news/news.png" alt="">
-                    </div>
-                    <div class="txt rt">
-                        <h2><a href="">加拿大绿色建筑技术合作交流会石家庄站圆满举办</a></h2>
-                        <p><a href="">1月16日，加拿大木结构与绿色建筑技术合作交流会在石家庄市成功召开。本活动旨在推进河北省绿色发展，增进省内企业对加拿大木结构与绿色建筑技术和产品的了解，促进技术交流合作和木结构行业发展。</a></p>
-                        <span>2018-01-16</span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="item">
-                    <div class="pic lt">
-                        <img src="../assets/images/news/news.png" alt="">
-                    </div>
-                    <div class="txt rt">
-                        <h2><a href="">加拿大绿色建筑技术合作交流会石家庄站圆满举办</a></h2>
-                        <p><a href="">1月16日，加拿大木结构与绿色建筑技术合作交流会在石家庄市成功召开。本活动旨在推进河北省绿色发展，增进省内企业对加拿大木结构与绿色建筑技术和产品的了解，促进技术交流合作和木结构行业发展。</a></p>
-                        <span>2018-01-16</span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="item">
-                    <div class="pic lt">
-                        <img src="../assets/images/news/news.png" alt="">
-                    </div>
-                    <div class="txt rt">
-                        <h2><a href="">加拿大绿色建筑技术合作交流会石家庄站圆满举办</a></h2>
-                        <p><a href="">1月16日，加拿大木结构与绿色建筑技术合作交流会在石家庄市成功召开。本活动旨在推进河北省绿色发展，增进省内企业对加拿大木结构与绿色建筑技术和产品的了解，促进技术交流合作和木结构行业发展。</a></p>
-                        <span>2018-01-16</span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="item">
-                    <div class="pic lt">
-                        <img src="../assets/images/news/news.png" alt="">
-                    </div>
-                    <div class="txt rt">
-                        <h2><a href="">加拿大绿色建筑技术合作交流会石家庄站圆满举办</a></h2>
-                        <p><a href="">1月16日，加拿大木结构与绿色建筑技术合作交流会在石家庄市成功召开。本活动旨在推进河北省绿色发展，增进省内企业对加拿大木结构与绿色建筑技术和产品的了解，促进技术交流合作和木结构行业发展。</a></p>
-                        <span>2018-01-16</span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="item">
-                    <div class="pic lt">
-                        <img src="../assets/images/news/news.png" alt="">
-                    </div>
-                    <div class="txt rt">
-                        <h2><a href="">加拿大绿色建筑技术合作交流会石家庄站圆满举办</a></h2>
-                        <p><a href="">1月16日，加拿大木结构与绿色建筑技术合作交流会在石家庄市成功召开。本活动旨在推进河北省绿色发展，增进省内企业对加拿大木结构与绿色建筑技术和产品的了解，促进技术交流合作和木结构行业发展。</a></p>
-                        <span>2018-01-16</span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="item">
-                    <div class="pic lt">
-                        <img src="../assets/images/news/news.png" alt="">
-                    </div>
-                    <div class="txt rt">
-                        <h2><a href="">加拿大绿色建筑技术合作交流会石家庄站圆满举办</a></h2>
-                        <p><a href="">1月16日，加拿大木结构与绿色建筑技术合作交流会在石家庄市成功召开。本活动旨在推进河北省绿色发展，增进省内企业对加拿大木结构与绿色建筑技术和产品的了解，促进技术交流合作和木结构行业发展。</a></p>
-                        <span>2018-01-16</span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
+
                 <div id="fenye">
                     <a class="prev" href="">首页</a>
-                    <a class="prev" href="">上一页</a>
+                    <!-- <a class="prev" href="">上一页</a> -->
                     <a class="curr" href="">1</a>
-                    <a href="">2</a>
-                    <a href="">3</a>
-                    <a class="next" href="">下一页</a>
+                    <!-- <a href="">2</a>
+                    <a href="">3</a> -->
+                    <!-- <a class="next" href="">下一页</a> -->
                     <a class="next" href="">尾页</a>
                     <div class="clear"></div>
                 </div>
@@ -107,26 +29,54 @@
 
 <script>
 import Home from "./Home";
+import news from '../assets/libs/news-con.js'
 export default {
 	name: "HelloWorld",
 	data() {
 		return {
-			msg: "Welcome to Your Vue.js App",
-			pageid: ""
+			list:[],
+			pageid: Number
 		};
 	},
 	components: {
 		Home
 	},
 	mounted() {
+		var that = this;
 		let id = this.$route.params.id;
 		this.pageid = id;
+		var list = []
+		this.list = ''
+		news.forEach((item,index)=> {
+			if(that.pageid == item.columnid){
+				list.push(item)
+			}
+		});
+		this.list = list
 	},
 	watch: {
 		$route(to, from) {
-			console.log(this.$route.params);
-			this.pageid = this.$route.params.id;
-		}
+			var that = this;
+			let id = this.$route.params.id;
+			this.pageid = id;
+			var list = []
+			news.forEach((item,index)=> {
+				if(that.pageid == item.columnid){
+					list.push(item)
+				}
+			});
+			this.list = list
+		},
+		list: {
+	　　　　handler(newValue, oldValue) {
+	　　　　　　for (let i = 0; i < newValue.length; i++) {
+	　　　　　　　　if (oldValue[i] != newValue[i]) {
+	　　　　　　　　　　console.log(newValue,'------')
+	　　　　　　　　}
+	　　　　　　}
+	　　　　},
+	　　　　deep: true
+	　　}
 	}
 };
 </script>

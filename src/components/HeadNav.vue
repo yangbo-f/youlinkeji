@@ -55,11 +55,6 @@ export default {
 							id: 11,
 							name: "协作团队介绍",
 							url: "team"
-						},
-						{
-							id: 12,
-							name: "大事记",
-							url: "history"
 						}
 					]
 				},
