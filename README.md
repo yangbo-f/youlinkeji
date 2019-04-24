@@ -1,6 +1,6 @@
 # youlinkeji
 
-> A Vue.js project
+> This is a project based on vue.js website
 
 ## Build Setup
 
